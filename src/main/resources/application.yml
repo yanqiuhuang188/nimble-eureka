@@ -1,0 +1,20 @@
+server:
+  port: ${nimble.server.port}     # 指定该Eureka实例的端口
+
+eureka:
+  instance:
+    hostname: ${nimble.eureka.instance.hostname}       # 指定该Eureka实例的主机名
+  client:
+    registerWithEureka: ${nimble.eureka.client.registerWithEureka}
+    fetchRegistry:  ${nimble.eureka.client.fetchRegistry}
+    serviceUrl:
+      defaultZone: ${nimble.eureka.client.serviceUrl.defaultZone}
+
+ribbon:
+  eureka:
+    enabled: true
+
+logging:
+  level:
+    root: ${nimble.logging.level.root}
+    com.nimble.eureka: ${nimble.logging.level.com.nimble.eureka}
