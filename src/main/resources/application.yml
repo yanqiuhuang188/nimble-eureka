@@ -1,18 +1,18 @@
 server:
-  port: ${nimble.server.port}     # 指定该Eureka实例的端口
+  port: ${nimble.server.port}
 
 eureka:
   instance:
-    hostname: ${nimble.eureka.instance.hostname}       # 指定该Eureka实例的主机名
+    hostname: ${nimble.eureka.instance.hostname}
+  server:
+    eviction-interval-timer-in-ms: 5000
+    enable-self-preservation: false
+    use-read-only-response-cache: false
   client:
     registerWithEureka: ${nimble.eureka.client.registerWithEureka}
     fetchRegistry:  ${nimble.eureka.client.fetchRegistry}
     serviceUrl:
       defaultZone: ${nimble.eureka.client.serviceUrl.defaultZone}
-
-ribbon:
-  eureka:
-    enabled: true
 
 logging:
   level:

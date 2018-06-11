@@ -1,10 +1,10 @@
 nimble:
   server:
-    port: 7900                  # 指定该Eureka实例的端口
+    port: 7900
 
   eureka:
     instance:
-      hostname: localhost       # 指定该Eureka实例的主机名
+      hostname: localhost
     client:
       registerWithEureka: false
       fetchRegistry: false
