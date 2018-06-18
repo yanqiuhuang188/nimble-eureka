@@ -1,16 +1,19 @@
 server:
   port: ${nimble.server.port}
 
+spring:
+  application:
+    name: ${nimble.spring.application.name}
+
 eureka:
   instance:
+    appname: ${nimble.spring.application.name}
     hostname: ${nimble.eureka.instance.hostname}
-  server:
-    eviction-interval-timer-in-ms: 5000
-    enable-self-preservation: false
-    use-read-only-response-cache: false
+    instance-id: ${nimble.eureka.instance.instance-id}
+    preferIpAddress: ${nimble.eureka.instance.preferIpAddress}
   client:
-    registerWithEureka: ${nimble.eureka.client.registerWithEureka}
-    fetchRegistry:  ${nimble.eureka.client.fetchRegistry}
+    register-with-eureka: ${nimble.eureka.client.register-with-eureka}
+    fetch-registry: ${nimble.eureka.client.fetch-registry}
     serviceUrl:
       defaultZone: ${nimble.eureka.client.serviceUrl.defaultZone}
 

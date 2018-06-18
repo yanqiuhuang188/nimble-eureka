@@ -1,6 +1,6 @@
 nimble:
   server:
-    port: 7901
+    port: 7902
 
   spring:
     application:
@@ -9,7 +9,7 @@ nimble:
   eureka:
     instance:
       appname: ${nimble.spring.application.name}
-      hostname: eureka1
+      hostname: eureka2
       instance-id: ${spring.application.name}:${server.port}
       preferIpAddress: false
     client:
@@ -24,5 +24,5 @@ nimble:
       com.nimble.eureka: debug
 
   otherEurekaServer:
-    hostname: eureka2
-    port: 7902
+    hostname: eureka1
+    port: 7901
